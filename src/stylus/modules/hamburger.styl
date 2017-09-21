@@ -1,0 +1,29 @@
+.hamburger {
+  position: fixed;
+  z-index: 9999;
+  right: 40px;
+  top: 50px;
+
+  .hamburger__top,
+  .hamburger__center,
+  .hamburger__bottom {
+    display: block;
+    margin: 6px auto;
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.hamburger.active .hamburger__center {
+  opacity: 0;
+}
+
+.hamburger.active .hamburger__top {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger.active .hamburger__bottom {
+  transform: translateY(-9px) rotate(-45deg);
+}

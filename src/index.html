@@ -1,0 +1,240 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Twinkle</title>
+    <link rel="stylesheet" href="css/main.min.css">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="js/min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        var map = new ymaps.Map("map", {
+            center: [55.76, 37.64],
+            zoom: 7
+        });
+    </script>
+    <script>
+        (function (d, w, c) {
+            w.ChatraID = '3eeJ7MrBpPgfn6Xiw';
+            var s = d.createElement('script');
+            w[c] = w[c] || function () {
+                    (w[c].q = w[c].q || []).push(arguments);
+                };
+            s.async = true;
+            s.src = (d.location.protocol === 'https:' ? 'https:' : 'http:')
+                + '//call.chatra.io/chatra.js';
+            if (d.head) d.head.appendChild(s);
+        })(document, window, 'Chatra');
+    </script>
+</head>
+<body>
+<div class="wrapper">
+    <div class="preloader js-preloader">
+        <div class="preloader-pic">
+            <img src="img/loader.gif" alt="">
+        </div>
+    </div>
+    <a href="#" class="hamburger js-menu-icon">
+        <span class="hamburger__top"></span>
+        <span class="hamburger__center"></span>
+        <span class="hamburger__bottom"></span>
+    </a>
+    <div class="menu js-menu">
+        <div class="menu__container">
+            <ul class="menu__list">
+                <li class="menu__item">
+                    <a href="#page-main" class="menu__link">
+                        Главная
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        Услуги
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="teachers.html" class="menu__link">
+                        Преподаватели
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#page-contacts" class="menu__link">
+                        Контакты
+                    </a>
+                </li>
+            </ul>
+            <div class="menu__footer">
+                пос. Авиатор, ул. Смоленская, 23 <br>
+                532-118, +7(964)603-21-18
+            </div>
+            <div class="menu__developer">
+                <span class="menu__developer-text">
+                    Разработка сайта
+                </span>
+                <a href="https://vk.com/aleksey_kirov" class="me" target="_blank">
+                    Алексей Киров
+                </a>
+            </div>
+        </div>
+    </div>
+    <header class="header">
+        <div class="header__logo">
+            <a href="index.html" class="logo"></a>
+        </div>
+    </header>
+    <aside class="sidebar">
+        <div class="footer_mouse" title="Для навигации используйте скролл">
+            <div class="mouse">
+                <div class="mouse__roller"></div>
+            </div>
+            <div class="mouse-arrow mouse-arrow_top"></div>
+            <div class="mouse-arrow mouse-arrow_bottom"></div>
+        </div>
+    </aside>
+    <footer class="footer">
+        <div class="socials">
+            <a href="https://vk.com/twinkle_barnaul" class="social-link social-link_vk" title="Группа в VK"
+               target="_blank"></a>
+            <a href="https://t.me/twinkle_barnaul" class="social-link social-link_tg" title="Мы в Телеграм"
+               target="_blank"></a>
+            <a href="https://www.instagram.com/twinkle_barnaul" class="social-link social-link_ig"
+               title="Наш Инстаграм" target="_blank"></a>
+        </div>
+    </footer>
+    <div class="main-content" id="page-main">
+        <div class="page page_main active">
+            <video autoplay loop>
+                <source src="video/video.mp4" type="video/mp4">
+            </video>
+            <div class="blackout">
+                <div class="content-wrapper">
+                    <div class="page__text-block js-slide active">
+                        <h1 class="h1">
+                            Изучение иностранных <br>
+                            языков в Барнауле
+                        </h1>
+                        <div class="page__text">
+                            <p>
+                                Учи самые восстребованные языки по уникальной методике преподавания! <br>
+                                Уроки проводят сертефицированные преподаватели.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="page__text-block js-slide ">
+                        <h1 class="h1">
+                            Выбери удобную <br>
+                            форму обучения!
+                        </h1>
+                        <div class="page__text">
+                            <p>
+                                Хочешь развивать коммуникативные навыки? - лучше всего <br>
+                                подойдет занятие в группе. <br>
+                                Нужен быстрый результат? - выбирай индивидуальные <br>
+                                занятия с опытным преподавателем.
+                            </p>
+                        </div>
+                        <a href="#" class="button">
+                            Узнать подробнее
+                        </a>
+                    </div>
+                    <div class="page__text-block js-slide ">
+                        <h1 class="h1">
+                            Остались вопросы?
+                        </h1>
+                        <div class="page__text">
+                            <p>
+                                Мы с удовольствием на них ответим. <br>
+                                Оставь заявку на бесплатную консультацию прямо сейчас. <br>
+                                Наш специалист свяжется с вами в ближайшее время.
+                            </p>
+                        </div>
+                        <a href="#" class="button">
+                            Оставить заявку
+                        </a>
+                    </div>
+                </div>
+                <div class="page__pagination">
+                    <div class="pagination">
+                        <a href="#" class="pagination__arrow pagination__arrow_left"></a>
+                        <ul class="pagination-list">
+                            <li class="pagination__item active">
+                                <a href="#" class="pagination__link">
+                                    01
+                                </a>
+                            </li>
+                            <li class="pagination__item">
+                                <a href="#" class="pagination__link">
+                                    02
+                                </a>
+                            </li>
+                            <li class="pagination__item">
+                                <a href="#" class="pagination__link">
+                                    03
+                                </a>
+                            </li>
+                        </ul>
+                        <a href="#" class="pagination__arrow pagination__arrow_right"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page page_services">
+            <div class="blackout">
+                <div class="content-wrapper">
+                    <div class="page__text-block">
+                        <h1 class="h1">
+                            Эта страница <br>
+                            ведет на страницу услуг
+                        </h1>
+                        <div class="page__text">
+                            <p>
+                                С этой страницы пользователи переходят на <br>
+                                страницу с услугами по нажатию кнопки
+                            </p>
+                        </div>
+                        <a href="teachers.html" class="button">
+                            Услуги
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page page_contacts" id="page-contacts">
+            <div class="blackout">
+                <div class="content-wrapper">
+                    <div class="page__text-block">
+                        <h1 class="h1">
+                            Контакты
+                        </h1>
+                        <div class="page__text">
+                            <p>
+                                <span class="contact contact_address">
+                                    пос. Авиатор, ул. Смоленская, 23
+                                </span>
+                                <a href="tel:532-118" class="contact contact_phone">
+                                    532-118
+                                </a>
+                                <a href="tel:+79646032118" class="contact contact_iphone">
+                                    +7(964)603-21-18
+                                </a>
+                            </p>
+                            <a href="#" class="button">
+                                Заказать звонок
+                            </a>
+                            <a href="https://yandex.ru/maps/197/barnaul/?ll=83.559009%2C53.346663&z=15&mode=search&whatshere%5Bpoint%5D=83.554537%2C53.348907&whatshere%5Bzoom%5D=17&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fll%3D83.554%252C53.346%26spn%3D0.001%252C0.001%26text%3D%25D0%25A0%25D0%25BE%25D1%2581%25D1%2581%25D0%25B8%25D1%258F%252C%2520%25D0%2590%25D0%25BB%25D1%2582%25D0%25B0%25D0%25B9%25D1%2581%25D0%25BA%25D0%25B8%25D0%25B9%2520%25D0%25BA%25D1%2580%25D0%25B0%25D0%25B9%252C%2520%25D0%2591%25D0%25B0%25D1%2580%25D0%25BD%25D0%25B0%25D1%2583%25D0%25BB%252C%2520%25D0%25BC%25D0%25B8%25D0%25BA%25D1%2580%25D0%25BE%25D1%2580%25D0%25B0%25D0%25B9%25D0%25BE%25D0%25BD%2520%25D0%2590%25D0%25B2%25D0%25B8%25D0%25B0%25D1%2582%25D0%25BE%25D1%2580%252C%2520%25D0%25A1%25D0%25BC%25D0%25BE%25D0%25BB%25D0%25B5%25D0%25BD%25D1%2581%25D0%25BA%25D0%25B0%25D1%258F%2520%25D1%2583%25D0%25BB%25D0%25B8%25D1%2586%25D0%25B0%252C%252023%2520"
+                               class="button" target="_blank">
+                                Найти в ЯндексКартах
+                            </a>
+                        </div>
+                    </div>
+                    <div class="phone">
+                        <div class="map" id="map"></div>
+                        <div class="phone-pic"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
