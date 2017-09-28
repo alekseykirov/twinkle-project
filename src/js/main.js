@@ -1,6 +1,6 @@
-$(window).on('load', function() {
-    $('.js-preloader').fadeOut();
-});
+// $(window).on('load', function() {
+//     $('.js-preloader').fadeOut();
+// });
 
 $(function () {
 
@@ -24,17 +24,41 @@ $(function () {
         }
     };
 
+    $('html').keydown(function (e) {
+        var activeSection = sections.filter('.active');
+        var nextSection = activeSection.next();
+        var prevSection = activeSection.prev();
+        if (e.keyCode === 40) {
+            if (nextSection.length) {
+                scrollToSection(nextSection.index());
+            }
+        }
+        if (e.keyCode === 38) {
+            if (prevSection.length) {
+                scrollToSection(prevSection.index());
+            }
+        }
+    });
+
+    $('.js-mouse').on('click', function () {
+        var activeSection = sections.filter('.active');
+        var nextSection = activeSection.next();
+        if (nextSection.length) {
+            scrollToSection(nextSection.index());
+        }
+    });
+
     $('.wrapper').on('wheel', function (e) {
-        var deltaY = e.originalEvent.deltaY,
-            activeSection = sections.filter('.active'),
-            nextSection = activeSection.next(),
-            prevSection = activeSection.prev();
+        var deltaY = e.originalEvent.deltaY;
+        var activeSection = sections.filter('.active');
+        var nextSection = activeSection.next();
+        var prevSection = activeSection.prev();
         if (deltaY > 0) {  //скролл вниз
             if (nextSection.length) {
                 scrollToSection(nextSection.index());
             }
         }
-        if (deltaY < 0) {  //скролл вниз
+        if (deltaY < 0) {  //скролл вверх
             if (prevSection.length) {
                 scrollToSection(prevSection.index());
             }
@@ -51,34 +75,6 @@ $(function () {
         parent.addClass('active').siblings().removeClass('active');
     });
 
-    $('.pagination__arrow_left').on('click', function () {
-        var elem = $('.pagination__item.active');
-        var indexElem = elem.index();
-        if (indexElem == 0) {
-            elem.removeClass('active');
-            $('.pagination__item').eq(2).addClass('active');
-            $('.js-slide.active').removeClass('active');
-            $('.js-slide').eq(2).addClass('active');
-        } else {
-            elem.removeClass('active').prev().addClass('active');
-            $('.js-slide.active').removeClass('active').prev().addClass('active');
-        }
-    });
-
-    $('.pagination__arrow_right').on('click', function () {
-        var elem = $('.pagination__item.active');
-        var indexElem = elem.index();
-        if (indexElem == 2) {
-            elem.removeClass('active');
-            $('.pagination__item').eq(0).addClass('active');
-            $('.js-slide.active').removeClass('active');
-            $('.js-slide').eq(0).addClass('active');
-        } else {
-            elem.removeClass('active').next().addClass('active');
-            $('.js-slide.active').removeClass('active').next().addClass('active');
-        }
-    });
-
     setInterval(function () {
         var activeSlide = $('.js-slide.active');
         var activePagination = $('.pagination__item.active');
@@ -92,7 +88,7 @@ $(function () {
             activeSlide.removeClass('active').next().addClass('active');
             activePagination.removeClass('active').next().addClass('active');
         }
-    }, 7000);
+    }, 8000);
 //END ===================================================Pagination
 
 //START ===================================================Teachers
@@ -118,6 +114,7 @@ $(function () {
         });
         myMap.geoObjects.add(myPlacemark);
     }
+
 //END ===================================================Yandex Map
 
 //START ===================================================Menu

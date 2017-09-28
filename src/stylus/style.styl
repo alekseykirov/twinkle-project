@@ -139,12 +139,12 @@ body {
   z-index: 111;
   bottom: 0;
   width: 100px;
-  height: 150px;
+  height: 80px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   box-sizing: border-box;
-  padding: 0 40px 50px;
+  padding: 0 40px 10px;
 }
 
 .sidebar {
@@ -184,8 +184,8 @@ body {
 
 .social-link {
   display: block;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   background-size: contain;
   opacity: .7;
   transition: opacity .3s;
@@ -277,59 +277,26 @@ body {
 
   &__item {
     display: inline-block;
-    font-size: 1.2em;
-  }
-
-  &__item.active .pagination__link {
-    opacity: 1;
-  }
-
-  &__item:after {
-    content: '';
-    width: 0;
-    height: 2px;
-    display: inline-block;
-    background: #fff;
-    vertical-align: middle;
-    transition: width 1.5s;
-  }
-
-  &__item.active:after {
-    width: 100px;
-    opacity: 1;
+    margin-right: 2px
   }
 
   &__link {
-    color: #fff;
-    text-decoration: none;
-    opacity: .6;
+    width: 13px
+    height: 13px
+    background: transparent
+    border-radius: 50%
     display: inline-block;
-    text-align: center;
-    width: 40px;
-  }
+    border: 2px solid #fff
+    position: relative
+    transition: 1s
 
-  &__link:hover {
-    opacity: 1;
+    &:hover {
+      background: rgba(255, 255, 255, .5)
+    }
   }
-
-  &__arrow {
-    width: 40px;
-    height: 40px;
-    display: inline-block;
-    opacity: .6;
-    background-size: contain;
-  }
-
-  &__arrow:hover {
-    opacity: 1;
-  }
-
-  &__arrow_left {
-    background-image: url(../img/icons/arrow-left.png);
-  }
-
-  &__arrow_right {
-    background-image: url(../img/icons/arrow-right.png);
+  
+  &__item.active .pagination__link {
+    background: #fff
   }
 }
 

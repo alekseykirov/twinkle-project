@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Twinkle</title>
-    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="css/main.css">
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script src="js/min.js"></script>
     <script src="js/main.js"></script>
@@ -29,11 +29,11 @@
 </head>
 <body>
 <div class="wrapper">
-    <div class="preloader js-preloader">
-        <div class="preloader-pic">
-            <img src="img/loader.gif" alt="">
-        </div>
-    </div>
+    <!--<div class="preloader js-preloader">-->
+        <!--<div class="preloader-pic">-->
+            <!--<img src="img/loader.gif" alt="">-->
+        <!--</div>-->
+    <!--</div>-->
     <a href="#" class="hamburger js-menu-icon">
         <span class="hamburger__top"></span>
         <span class="hamburger__center"></span>
@@ -84,7 +84,7 @@
     </header>
     <aside class="sidebar">
         <div class="footer_mouse" title="Для навигации используйте скролл">
-            <div class="mouse">
+            <div class="mouse js-mouse">
                 <div class="mouse__roller"></div>
             </div>
             <div class="mouse-arrow mouse-arrow_top"></div>
@@ -103,9 +103,9 @@
     </footer>
     <div class="main-content" id="page-main">
         <div class="page page_main active">
-            <video autoplay loop>
-                <source src="video/video.mp4" type="video/mp4">
-            </video>
+            <!--<video autoplay loop>-->
+                <!--<source src="video/video.mp4" type="video/mp4">-->
+            <!--</video>-->
             <div class="blackout">
                 <div class="content-wrapper">
                     <div class="page__text-block js-slide active">
@@ -155,25 +155,17 @@
                 </div>
                 <div class="page__pagination">
                     <div class="pagination">
-                        <a href="#" class="pagination__arrow pagination__arrow_left"></a>
                         <ul class="pagination-list">
                             <li class="pagination__item active">
-                                <a href="#" class="pagination__link">
-                                    01
-                                </a>
+                                <a href="#" class="pagination__link"></a>
                             </li>
                             <li class="pagination__item">
-                                <a href="#" class="pagination__link">
-                                    02
-                                </a>
+                                <a href="#" class="pagination__link"></a>
                             </li>
                             <li class="pagination__item">
-                                <a href="#" class="pagination__link">
-                                    03
-                                </a>
+                                <a href="#" class="pagination__link"></a>
                             </li>
                         </ul>
-                        <a href="#" class="pagination__arrow pagination__arrow_right"></a>
                     </div>
                 </div>
             </div>
