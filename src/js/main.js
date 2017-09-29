@@ -123,6 +123,19 @@ $(function () {
         $(this).toggleClass('active');
         $('.js-menu').toggleClass('active');
     });
+
+    //TODO доделать фичу чтобы закрывалось меню при нажатии на область вне контейнера с меню
+    // $('.js-menu').on('click', function () {
+        // $(this).removeClass('active');
+        // $('.js-menu').toggleClass('active');
+    // });
+
+
 //END ===================================================Menu
+
+    $('.service__item').on('mouseover', function () {
+        $(this).siblings().css({'background-image': 'none'});
+        $(this).parent().css({'background-image': 'url(../img/bg-gb.jpg)'})
+    })
 
 });

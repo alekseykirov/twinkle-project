@@ -31,6 +31,15 @@ body {
   margin-bottom: 10px;
 }
 
+.h3 {
+  font: 700 1.5vw 'Rounded', sans-serif;
+  letter-spacing: 3px;
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow: 6px 6px 18px #000;
+  margin-bottom: 10px;
+}
+
 .button {
   padding: 10px 50px;
   text-decoration: none;
@@ -91,7 +100,7 @@ body {
 
   &_main {
     top: 0;
-    /*background: url(../img/bg1.jpg) center center no-repeat;*/
+    background: url(../img/bg1.jpg) center center no-repeat;
     background-size: cover;
   }
 
@@ -114,6 +123,62 @@ body {
   }
 }
 
+.service {
+  position: absolute
+  display: flex
+  background: url(../img/bg2.jpg) center center no-repeat;
+  background-size: cover;
+
+  &__item {
+    position: relative
+    min-height 100%
+    box-sizing border-box
+    width: 25%
+    border-right: 1px solid rgba(#fff, .3)
+    display: block
+    background-size: cover
+    background-position-x center
+    transition: .5s
+
+    &:hover {
+      background: rgba(#fff, .1)
+    }
+
+    &:hover .service__wrapper {
+      top: 49.5%
+    }
+
+    &_gb {
+      background-image: url(../img/bg-gb.jpg);
+    }
+
+    &_ch {
+      background-image: url(../img/bg-china.jpg);
+    }
+
+    &_du {
+      background-image: url(../img/bg-deuch.jpg)
+    }
+
+    &_log {
+      background-image: url(../img/bg-log.jpg);
+    }
+  }
+
+  &__wrapper {
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+    width: 80%
+    transition .4s
+  }
+
+  &__text {
+    color: #fff;
+  }
+}
+
 .js-slide {
   opacity: 0;
 }
@@ -128,10 +193,11 @@ body {
   width: 100%;
   height: 150px;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: flex-start;
+  align-items: center;
   box-sizing: border-box;
-  padding: 50px 40px 0;
+  padding: 0 40px;
+  //background: rgba(0,0,0,.3)
 }
 
 .footer {
@@ -144,7 +210,7 @@ body {
   justify-content: flex-start;
   align-items: center;
   box-sizing: border-box;
-  padding: 0 40px 10px;
+  padding: 0 40px;
 }
 
 .sidebar {
@@ -212,6 +278,7 @@ body {
   height: 30px;
   border-radius: 14px;
   border: 2px solid #fff;
+  cursor: pointer
 
   &__roller {
     display: block;
@@ -480,6 +547,7 @@ video {
     left: 100%;
     background: rgba(0, 0, 0, .75);
     padding: 13vh 5vw;
+    z-index: 9999
     transition: all .3s;
   }
 
