@@ -136,7 +136,6 @@ body {
 }
 .page_main {
   top: 0;
-  background: url("../img/bg1.jpg") center center no-repeat;
   -webkit-background-size: cover;
           background-size: cover;
 }
@@ -164,9 +163,22 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  background: url("../img/bg2.jpg") center center no-repeat;
   -webkit-background-size: cover;
           background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.service.gb {
+  background-image: url("../img/bg-gb.jpg");
+}
+.service.ch {
+  background-image: url("../img/bg-china.jpg");
+}
+.service.du {
+  background-image: url("../img/bg-deuch.jpg");
+}
+.service.log {
+  background-image: url("../img/bg-log.jpg");
 }
 .service__item {
   position: relative;
@@ -174,35 +186,47 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 25%;
-  border-right: 1px solid rgba(255,255,255,0.3);
+  border-right: 1px solid rgba(255,255,255,0.2);
   display: block;
-  -webkit-background-size: cover;
-          background-size: cover;
-  background-position-x: center;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
 }
-.service__item:hover {
-  background: rgba(255,255,255,0.1);
-}
 .service__item:hover .service__wrapper {
   top: 49.5%;
 }
-.service__item_gb {
+.service__item_gb .service__background {
   background-image: url("../img/bg-gb.jpg");
 }
-.service__item_ch {
+.service__item_ch .service__background {
   background-image: url("../img/bg-china.jpg");
 }
-.service__item_du {
+.service__item_du .service__background {
   background-image: url("../img/bg-deuch.jpg");
 }
-.service__item_log {
+.service__item_log .service__background {
   background-image: url("../img/bg-log.jpg");
+}
+.service__background {
+  width: 100%;
+  height: 100%;
+  display: block;
+  -webkit-background-size: cover;
+          background-size: cover;
+  background-position-x: center;
+}
+.service__blackout {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0,0,0,0.15);
+  z-index: 7777;
 }
 .service__wrapper {
   position: absolute;
+  z-index: 9999;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);

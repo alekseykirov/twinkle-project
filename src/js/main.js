@@ -1,6 +1,6 @@
-// $(window).on('load', function() {
-//     $('.js-preloader').fadeOut();
-// });
+$(window).on('load', function() {
+    $('.js-preloader').fadeOut();
+});
 
 $(function () {
 
@@ -134,8 +134,14 @@ $(function () {
 //END ===================================================Menu
 
     $('.service__item').on('mouseover', function () {
-        $(this).siblings().css({'background-image': 'none'});
-        $(this).parent().css({'background-image': 'url(../img/bg-gb.jpg)'})
-    })
+        var dataAttr = $(this).attr('data-page');
+        $(this).parent().addClass(dataAttr);
+        $(this).parent().find('.service__background').hide();
+    });
 
+    $('.service__item').on('mouseleave', function () {
+        var dataAttr = $(this).attr('data-page');
+        $(this).parent().find('.service__background').show();
+        $(this).parent().removeClass(dataAttr);
+    })
 });

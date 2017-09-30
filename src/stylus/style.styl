@@ -100,7 +100,7 @@ body {
 
   &_main {
     top: 0;
-    background: url(../img/bg1.jpg) center center no-repeat;
+    //background: url(../img/bg1.jpg) center center no-repeat;
     background-size: cover;
   }
 
@@ -126,47 +126,77 @@ body {
 .service {
   position: absolute
   display: flex
-  background: url(../img/bg2.jpg) center center no-repeat;
   background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat
+
+  &.gb {
+    background-image: url(../img/bg-gb.jpg);
+  }
+
+  &.ch {
+    background-image: url(../img/bg-china.jpg);
+  }
+
+  &.du {
+    background-image: url(../img/bg-deuch.jpg);
+  }
+
+  &.log {
+    background-image: url(../img/bg-log.jpg);
+  }
 
   &__item {
     position: relative
     min-height 100%
     box-sizing border-box
     width: 25%
-    border-right: 1px solid rgba(#fff, .3)
+    border-right: 1px solid rgba(#fff, .2)
     display: block
-    background-size: cover
-    background-position-x center
     transition: .5s
-
-    &:hover {
-      background: rgba(#fff, .1)
-    }
 
     &:hover .service__wrapper {
       top: 49.5%
     }
 
-    &_gb {
+    &_gb .service__background {
       background-image: url(../img/bg-gb.jpg);
     }
 
-    &_ch {
+    &_ch .service__background {
       background-image: url(../img/bg-china.jpg);
     }
 
-    &_du {
+    &_du .service__background {
       background-image: url(../img/bg-deuch.jpg)
     }
 
-    &_log {
+    &_log .service__background {
       background-image: url(../img/bg-log.jpg);
     }
   }
 
+  &__background {
+    width: 100%
+    height: 100%
+    display: block
+    background-size: cover
+    background-position-x center
+  }
+
+  &__blackout {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .15);
+    z-index: 7777;
+  }
+
   &__wrapper {
     position: absolute
+    z-index: 9999
     top: 50%
     left: 50%
     transform: translate(-50%,-50%)
