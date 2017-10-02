@@ -126,6 +126,7 @@ body {
 .service {
   position: absolute
   display: flex
+  //background-image: url(../img/bg-gb.jpg);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat
@@ -575,7 +576,7 @@ video {
     bottom: 0;
     right: -30%;
     left: 100%;
-    background: rgba(0, 0, 0, .75);
+    background: rgba(0, 0, 0, .95);
     padding: 13vh 5vw;
     z-index: 9999
     transition: all .3s;
@@ -605,6 +606,11 @@ video {
     line-height: 1.5em;
   }
 
+  &__footer-link {
+    color: #fff;
+    text-decoration none
+  }
+
   &__developer {
     color: #fff;
     font-size: 0.7em;
@@ -630,8 +636,10 @@ video {
 
 .me {
   color: #fff;
-  text-decoration: none;
   transition: .2s;
+  text-decoration: none
+  border-bottom 1px solid rgba(#fff, .7)
+  line-height 3px
   opacity: 0.7;
 }
 
@@ -658,8 +666,13 @@ video {
 }
 
 @media (max-width: 850px) {
+  video {
+    display: none
+  }
+
   .h1 {
-    font-size 8vw
+    font: 700 7vw 'Rounded', sans-serif;
+    letter-spacing: 0;
   }
 
   .h3 {
@@ -668,10 +681,28 @@ video {
 
   .button {
     margin-top: 10px
-    padding: 7px 40px
+    padding: 8px 0
+    font-size .8rem
+    text-align: center
+    width: 100%
   }
 
-  .socials {
+  .hamburger {
+    right: 19px;
+    top: 18px;
+  }
+
+  .header {
+    height: 70px;
+    padding: 0 10px
+  }
+
+  .logo {
+    width: 94px;
+    height: 45px;
+  }
+
+    .socials {
     display: none
   }
 
@@ -681,11 +712,6 @@ video {
 
   .sidebar {
     display: none
-  }
-
-  .pagination__link {
-    width: 20px
-    height: 20px
   }
 
   .page__text-block {
@@ -712,10 +738,11 @@ video {
 
   .service__text {
     font-size .8em
+    display: none
   }
 
   .menu {
-    font-size 1.7em
+    font-size 1.1em
   }
 
   .menu__container {
@@ -724,13 +751,13 @@ video {
   }
 
   .menu__item {
-    margin-bottom: 4vh
+    margin-bottom: 2vh
   }
 
   .menu__footer {
     text-align: center
     max-width none
-    font-size: .7em
+    font-size: .75em
   }
 
   .menu__developer {

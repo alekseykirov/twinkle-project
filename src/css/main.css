@@ -612,7 +612,7 @@ video {
   bottom: 0;
   right: -30%;
   left: 100%;
-  background: rgba(0,0,0,0.75);
+  background: rgba(0,0,0,0.95);
   padding: 13vh 5vw;
   z-index: 9999;
   -webkit-transition: all 0.3s;
@@ -639,6 +639,10 @@ video {
   max-width: 257px;
   line-height: 1.5em;
 }
+.menu__footer-link {
+  color: #fff;
+  text-decoration: none;
+}
 .menu__developer {
   color: #fff;
   font-size: 0.7em;
@@ -659,10 +663,12 @@ video {
 }
 .me {
   color: #fff;
-  text-decoration: none;
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.7);
+  line-height: 3px;
   opacity: 0.7;
 }
 .me:hover {
@@ -687,15 +693,34 @@ video {
   display: block;
 }
 @media (max-width: 850px) {
+  video {
+    display: none;
+  }
   .h1 {
-    font-size: 8vw;
+    font: 700 7vw 'Rounded', sans-serif;
+    letter-spacing: 0;
   }
   .h3 {
     font-size: 4.5vw;
   }
   .button {
     margin-top: 10px;
-    padding: 7px 40px;
+    padding: 8px 0;
+    font-size: 0.8rem;
+    text-align: center;
+    width: 100%;
+  }
+  .hamburger {
+    right: 19px;
+    top: 18px;
+  }
+  .header {
+    height: 70px;
+    padding: 0 10px;
+  }
+  .logo {
+    width: 94px;
+    height: 45px;
   }
   .socials {
     display: none;
@@ -705,10 +730,6 @@ video {
   }
   .sidebar {
     display: none;
-  }
-  .pagination__link {
-    width: 20px;
-    height: 20px;
   }
   .page__text-block {
     padding-right: 10vw;
@@ -733,21 +754,22 @@ video {
   }
   .service__text {
     font-size: 0.8em;
+    display: none;
   }
   .menu {
-    font-size: 1.7em;
+    font-size: 1.1em;
   }
   .menu__container {
     padding: 13vh 10vw;
     text-align: center;
   }
   .menu__item {
-    margin-bottom: 4vh;
+    margin-bottom: 2vh;
   }
   .menu__footer {
     text-align: center;
     max-width: none;
-    font-size: 0.7em;
+    font-size: 0.75em;
   }
   .menu__developer {
     font-size: 2vw;
