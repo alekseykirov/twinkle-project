@@ -68,9 +68,8 @@ body {
 }
 
 .content-wrapper {
-  width: 1060px;
+  padding 0 10vw;
   min-height: 100%;
-  margin: 0 auto;
 }
 
 .page {
@@ -93,14 +92,15 @@ body {
 
   &__pagination {
     position: absolute;
-    bottom: 80px;
+    bottom: 26px;
+    left: 50%
+    transform: translateX(-50%);
     z-index: 3333;
-    margin-left: 15vw;
   }
 
   &_main {
     top: 0;
-    //background: url(../img/bg1.jpg) center center no-repeat;
+  //background: url(../img/bg1.jpg) center center no-repeat;
     background-size: cover;
   }
 
@@ -199,7 +199,7 @@ body {
     z-index: 9999
     top: 50%
     left: 50%
-    transform: translate(-50%,-50%)
+    transform: translate(-50%, -50%)
     width: 80%
     transition .4s
   }
@@ -227,7 +227,7 @@ body {
   align-items: center;
   box-sizing: border-box;
   padding: 0 40px;
-  //background: rgba(0,0,0,.3)
+  background: rgba(0, 0, 0, .3)
 }
 
 .footer {
@@ -378,20 +378,20 @@ body {
   }
 
   &__link {
-    width: 13px
-    height: 13px
+    width: 12px
+    height: 12px
     background: transparent
     border-radius: 50%
     display: inline-block;
-    border: 2px solid #fff
+    border: 2px solid rgba(255, 255, 255, .7)
     position: relative
-    transition: 1s
+    transition: .5s
 
     &:hover {
       background: rgba(255, 255, 255, .5)
     }
   }
-  
+
   &__item.active .pagination__link {
     background: #fff
   }
@@ -655,4 +655,97 @@ video {
   left: 50%;
   transform: translate(-50%, -50%);
   display: block;
+}
+
+@media (max-width: 850px) {
+  .h1 {
+    font-size 8vw
+  }
+
+  .h3 {
+    font-size 4.5vw
+  }
+
+  .button {
+    margin-top: 10px
+    padding: 7px 40px
+  }
+
+  .socials {
+    display: none
+  }
+
+  .phone {
+    display: none
+  }
+
+  .sidebar {
+    display: none
+  }
+
+  .pagination__link {
+    width: 20px
+    height: 20px
+  }
+
+  .page__text-block {
+    padding-right: 10vw
+  }
+
+  .page__text {
+    font-size 1em
+  }
+
+  .service {
+    flex-direction column
+  }
+
+  .service__item {
+    width: 100%
+    height: 25vh
+    min-height auto
+  }
+
+  .service__wrapper {
+    text-align: center
+  }
+
+  .service__text {
+    font-size .8em
+  }
+
+  .menu {
+    font-size 1.7em
+  }
+
+  .menu__container {
+    padding: 13vh 10vw
+    text-align: center
+  }
+
+  .menu__item {
+    margin-bottom: 4vh
+  }
+
+  .menu__footer {
+    text-align: center
+    max-width none
+    font-size: .7em
+  }
+
+  .menu__developer {
+    font-size 2vw
+    bottom: 35px
+  }
+
+  .menu.active .menu__container {
+    right: 0;
+    left: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .menu__developer {
+    font-size 3vw
+  }
 }
