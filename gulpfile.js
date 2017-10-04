@@ -45,7 +45,7 @@ gulp.task('clean', function () {
     return del.sync('dist');
 });
 
-gulp.task('watch', ['browser-sync', 'css-libs', 'scripts'], function () {
+gulp.task('watch', [ 'css-libs', 'scripts'], function () {
     gulp.watch('src/stylus/*.styl', ['stylus']);
     gulp.watch('src/*.html', browserSync.reload);
     gulp.watch('src/js/**/*.js', browserSync.reload);
