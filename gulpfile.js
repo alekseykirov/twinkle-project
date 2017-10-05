@@ -6,7 +6,9 @@ var gulp = require('gulp'),
     cssnano = require('gulp-cssnano'),
     rename = require('gulp-rename'),
     del = require('del'),
-    autoprefixer = require('gulp-autoprefixer');
+    autoprefixer = require('gulp-autoprefixer'),
+    htmlreplace = require('gulp-html-replace'),
+    timestamp = Date.now();
 
 gulp.task('stylus', function () {
     return gulp.src('src/stylus/main.styl')
@@ -14,6 +16,19 @@ gulp.task('stylus', function () {
         .pipe(autoprefixer(['last 15 version', '> 1%', 'ie 8'], {cascade: true}))
         .pipe(gulp.dest('src/css')) //destination
         .pipe(browserSync.reload({stream: true}))
+});
+
+gulp.task('clearUserCache', function() {
+    return gulp.src(['src/index.html', 'src/service.html'])
+        .pipe(htmlreplace({
+                clearCache: {
+                    src: [[timestamp, timestamp, timestamp]],
+                    tpl: '<link rel="stylesheet" href="css/main.min.css?%s">\n' +
+                         '<script src="js/min.js?%s"></script>\n' +
+                         '<script src="js/main.js?%s"></script>'}}
+            )
+        )
+        .pipe(gulp.dest('dist'));
 });
 
 gulp.task('scripts', function () {
@@ -45,13 +60,13 @@ gulp.task('clean', function () {
     return del.sync('dist');
 });
 
-gulp.task('watch', [ 'css-libs', 'scripts'], function () {
+gulp.task('watch', ['css-libs', 'scripts'], function () {
     gulp.watch('src/stylus/*.styl', ['stylus']);
     gulp.watch('src/*.html', browserSync.reload);
     gulp.watch('src/js/**/*.js', browserSync.reload);
 });
 
-gulp.task('build', ['clean', 'stylus', 'scripts'], function () {
+gulp.task('build', ['clean', 'clearUserCache', 'stylus', 'scripts'], function () {
     var buildCss = gulp.src('src/css/main.min.css')
         .pipe(gulp.dest('dist/css'));
 
@@ -60,9 +75,6 @@ gulp.task('build', ['clean', 'stylus', 'scripts'], function () {
 
     var buildJs = gulp.src('src/js/**/*')
         .pipe(gulp.dest('dist/js'));
-
-    var buildHtml = gulp.src('src/*.html')
-        .pipe(gulp.dest('dist'));
 
     var buildVideo = gulp.src('src/video/**/*')
         .pipe(gulp.dest('dist/video'));

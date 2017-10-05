@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <title>Twinkle</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/main.css">
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <!-- build:clearCache -->
+    <link rel="stylesheet" href="css/main.min.css">
     <script src="js/min.js"></script>
     <script src="js/main.js"></script>
+    <!-- endbuild -->
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script>
         var map = new ymaps.Map("map", {
             center: [55.76, 37.64],
@@ -49,7 +51,7 @@
                     </a>
                 </li>
                 <li class="menu__item">
-                    <a href="services.html" class="menu__link">
+                    <a href="service.html" class="menu__link">
                         Услуги
                     </a>
                 </li>
@@ -185,7 +187,7 @@
                                 страницу с услугами по нажатию кнопки
                             </p>
                         </div>
-                        <a href="services.html" class="button">
+                        <a href="service.html" class="button">
                             Услуги
                         </a>
                     </div>
@@ -211,9 +213,10 @@
                                     +7(964)603-21-18
                                 </a>
                             </p>
-                            <a href="#" class="button">
-                                Заказать звонок
-                            </a>
+                            <!--TODO сверстать форму-->
+                            <!--<a href="#" class="button">-->
+                                <!--Заказать звонок-->
+                            <!--</a>-->
                             <a href="https://yandex.ru/maps/197/barnaul/?ll=83.559009%2C53.346663&z=15&mode=search&whatshere%5Bpoint%5D=83.554537%2C53.348907&whatshere%5Bzoom%5D=17&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fll%3D83.554%252C53.346%26spn%3D0.001%252C0.001%26text%3D%25D0%25A0%25D0%25BE%25D1%2581%25D1%2581%25D0%25B8%25D1%258F%252C%2520%25D0%2590%25D0%25BB%25D1%2582%25D0%25B0%25D0%25B9%25D1%2581%25D0%25BA%25D0%25B8%25D0%25B9%2520%25D0%25BA%25D1%2580%25D0%25B0%25D0%25B9%252C%2520%25D0%2591%25D0%25B0%25D1%2580%25D0%25BD%25D0%25B0%25D1%2583%25D0%25BB%252C%2520%25D0%25BC%25D0%25B8%25D0%25BA%25D1%2580%25D0%25BE%25D1%2580%25D0%25B0%25D0%25B9%25D0%25BE%25D0%25BD%2520%25D0%2590%25D0%25B2%25D0%25B8%25D0%25B0%25D1%2582%25D0%25BE%25D1%2580%252C%2520%25D0%25A1%25D0%25BC%25D0%25BE%25D0%25BB%25D0%25B5%25D0%25BD%25D1%2581%25D0%25BA%25D0%25B0%25D1%258F%2520%25D1%2583%25D0%25BB%25D0%25B8%25D1%2586%25D0%25B0%252C%252023%2520"
                                class="button" target="_blank">
                                 Найти в Яндекс Картах
