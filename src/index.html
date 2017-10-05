@@ -5,7 +5,7 @@
     <title>Twinkle</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- build:clearCache -->
-    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="css/main.css">
     <script src="js/min.js"></script>
     <script src="js/main.js"></script>
     <!-- endbuild -->
@@ -29,6 +29,11 @@
             if (d.head) d.head.appendChild(s);
         })(document, window, 'Chatra');
     </script>
+    <script>
+        window.ChatraSetup = {
+            buttonSize: 45
+        };
+    </script>
 </head>
 <body>
 <div class="wrapper">
@@ -43,6 +48,7 @@
         <span class="hamburger__bottom"></span>
     </a>
     <div class="menu js-menu">
+        <div class="menu__inactiveField"></div>
         <div class="menu__container">
             <ul class="menu__list">
                 <li class="menu__item">

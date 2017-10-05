@@ -124,6 +124,18 @@ $(function () {
         $('.js-menu').toggleClass('active');
     });
 
+    $('.menu__link').on('click', function () {
+        $('.js-menu-icon').removeClass('active');
+        $('.js-menu').removeClass('active');
+    });
+
+    $('.menu__inactiveField').on('click', function () {
+        $('.js-menu-icon').removeClass('active');
+        $('.js-menu').removeClass('active');
+    });
+
+
+
     //TODO доделать фичу чтобы закрывалось меню при нажатии на область вне контейнера с меню
     // $('.js-menu').on('click', function () {
         // $(this).removeClass('active');

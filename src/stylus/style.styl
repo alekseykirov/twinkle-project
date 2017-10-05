@@ -582,6 +582,15 @@ video {
     transition: all .3s;
   }
 
+  &__inactiveField {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 30%;
+    left: 0;
+    z-index: 9999
+  }
+
   &__list {
     list-style: none;
     border-bottom: 1px solid rgba(255, 255, 255, .3);
@@ -619,7 +628,7 @@ video {
     color: #fff;
     font-size: 0.7em;
     position: absolute;
-    bottom: 46px;
+    bottom: 20px;
     margin-top: 2vh;
   }
 
@@ -710,17 +719,8 @@ video {
     display: none
   }
 
-  .socials {
-
-  }
-
-  .social-link {
-    width: 45px
-    height: 45px
-  }
-
   .footer {
-    height: 57px
+    height: 87px
     padding 0 14px
   }
 
@@ -737,7 +737,7 @@ video {
   }
 
   .page__pagination {
-    bottom: 60px
+    display: none
   }
 
   .service {
@@ -781,7 +781,7 @@ video {
   }
 
   .menu__developer {
-    font-size 2vw
+    font-size 0.5em
     bottom: 20px
   }
 
@@ -792,7 +792,5 @@ video {
 }
 
 @media (max-width: 500px) {
-  .menu__developer {
-    font-size 3vw
-  }
+
 }

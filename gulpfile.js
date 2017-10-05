@@ -43,7 +43,7 @@ gulp.task('scripts', function () {
 gulp.task('css-libs', ['stylus'], function () {
     return gulp.src('src/css/main.css')
         .pipe(cssnano())
-        .pipe(rename({suffix: '.min'}))
+        // .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('src/css'))
 });
 
@@ -60,7 +60,7 @@ gulp.task('clean', function () {
     return del.sync('dist');
 });
 
-gulp.task('watch', ['css-libs', 'scripts'], function () {
+gulp.task('watch', ['browser-sync', 'css-libs', 'scripts'], function () {
     gulp.watch('src/stylus/*.styl', ['stylus']);
     gulp.watch('src/*.html', browserSync.reload);
     gulp.watch('src/js/**/*.js', browserSync.reload);

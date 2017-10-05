@@ -620,6 +620,14 @@ video {
   -o-transition: all 0.3s;
   transition: all 0.3s;
 }
+.menu__inactiveField {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 30%;
+  left: 0;
+  z-index: 9999;
+}
 .menu__list {
   list-style: none;
   border-bottom: 1px solid rgba(255,255,255,0.3);
@@ -651,7 +659,7 @@ video {
   color: #fff;
   font-size: 0.7em;
   position: absolute;
-  bottom: 46px;
+  bottom: 20px;
   margin-top: 2vh;
 }
 .menu__developer-text {
@@ -729,12 +737,8 @@ video {
   .phone {
     display: none;
   }
-  .social-link {
-    width: 45px;
-    height: 45px;
-  }
   .footer {
-    height: 57px;
+    height: 87px;
     padding: 0 14px;
   }
   .sidebar {
@@ -747,7 +751,7 @@ video {
     font-size: 1.1em;
   }
   .page__pagination {
-    bottom: 60px;
+    display: none;
   }
   .service {
     -webkit-box-orient: vertical;
@@ -786,17 +790,12 @@ video {
     margin-bottom: 12px;
   }
   .menu__developer {
-    font-size: 2vw;
+    font-size: 0.5em;
     bottom: 20px;
   }
   .menu.active .menu__container {
     right: 0;
     left: 0;
-  }
-}
-@media (max-width: 500px) {
-  .menu__developer {
-    font-size: 3vw;
   }
 }
 @-webkit-keyframes move-roller {
