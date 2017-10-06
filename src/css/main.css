@@ -122,19 +122,16 @@ body {
   -o-transition: 1.5s;
   transition: 1.5s;
 }
+.page__slide-block {
+  margin-top: 50vh;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
 .page__text {
   color: #fff;
   font-size: 1.5em;
   text-shadow: 4px 4px 15px #000;
-}
-.page__pagination {
-  position: absolute;
-  bottom: 26px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
-  z-index: 3333;
 }
 .page_main {
   top: 0;
@@ -242,12 +239,6 @@ body {
 }
 .service__text {
   color: #fff;
-}
-.js-slide {
-  opacity: 0;
-}
-.js-slide.active {
-  opacity: 1;
 }
 .header {
   position: fixed;
@@ -401,42 +392,6 @@ body {
 .mouse-arrow_bottom {
   -webkit-animation: twinkle-arrow-bottom 1s infinite;
           animation: twinkle-arrow-bottom 1s infinite;
-}
-.pagination {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.pagination__item {
-  display: inline-block;
-  margin-right: 2px;
-}
-.pagination__link {
-  width: 12px;
-  height: 12px;
-  background: transparent;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
-  display: inline-block;
-  border: 2px solid rgba(255,255,255,0.7);
-  position: relative;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-}
-.pagination__link:hover {
-  background: rgba(255,255,255,0.5);
-}
-.pagination__item.active .pagination__link {
-  background: #fff;
-}
-.pagination-list {
-  list-style: none;
 }
 .teachers {
   display: -webkit-box;
@@ -749,9 +704,6 @@ video {
   }
   .page__text {
     font-size: 1.1em;
-  }
-  .page__pagination {
-    display: none;
   }
   .service {
     -webkit-box-orient: vertical;

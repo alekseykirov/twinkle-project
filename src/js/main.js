@@ -1,11 +1,17 @@
-$(window).on('load', function() {
+$(window).on('load', function () {
     $('.js-preloader').fadeOut();
 });
 
 $(function () {
+    $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 25,
+        autoplay: true,
+        autoplayTimeout: 6000,
+        items: 1
+    });
 
-
-//START ===================================================One page Scroll
+//START =================================================One page Scroll
     var sections = $('.page'),
         display = $('.main-content');
     inScroll = false;
@@ -66,31 +72,6 @@ $(function () {
     });
 //END ===================================================One page Scroll
 
-//START ===================================================Pagination
-    $('.pagination__link').on('click', function () {
-        var parent = $(this).parent();
-        var indexPagination = parent.index();
-        $('.js-slide.active').removeClass('active');
-        $('.js-slide').eq(indexPagination).addClass('active');
-        parent.addClass('active').siblings().removeClass('active');
-    });
-
-    setInterval(function () {
-        var activeSlide = $('.js-slide.active');
-        var activePagination = $('.pagination__item.active');
-        var indexElem = activeSlide.index();
-        if (indexElem == 2) {
-            activeSlide.removeClass('active');
-            $('.js-slide').eq(0).addClass('active');
-            activePagination.removeClass('active');
-            $('.pagination__item').eq(0).addClass('active');
-        } else {
-            activeSlide.removeClass('active').next().addClass('active');
-            activePagination.removeClass('active').next().addClass('active');
-        }
-    }, 8000);
-//END ===================================================Pagination
-
 //START ===================================================Teachers
     $('.teacher-item').on('mouseover', function () {
         $(this).addClass('active').removeClass('disabled').siblings().removeClass('active').addClass('disabled');
@@ -133,15 +114,6 @@ $(function () {
         $('.js-menu-icon').removeClass('active');
         $('.js-menu').removeClass('active');
     });
-
-
-
-    //TODO доделать фичу чтобы закрывалось меню при нажатии на область вне контейнера с меню
-    // $('.js-menu').on('click', function () {
-        // $(this).removeClass('active');
-        // $('.js-menu').toggleClass('active');
-    // });
-
 
 //END ===================================================Menu
 

@@ -84,18 +84,15 @@ body {
     transition: 1.5s;
   }
 
+  &__slide-block {
+    margin-top: 50vh
+    transform: translateY(-50%);
+  }
+
   &__text {
     color: #fff;
     font-size: 1.5em;
     text-shadow: 4px 4px 15px #000;
-  }
-
-  &__pagination {
-    position: absolute;
-    bottom: 26px;
-    left: 50%
-    transform: translateX(-50%);
-    z-index: 3333;
   }
 
   &_main {
@@ -208,14 +205,6 @@ body {
   &__text {
     color: #fff;
   }
-}
-
-.js-slide {
-  opacity: 0;
-}
-
-.js-slide.active {
-  opacity: 1;
 }
 
 .header {
@@ -367,39 +356,6 @@ body {
   100% {
     opacity: .2;
   }
-}
-
-.pagination {
-  display: flex;
-  align-items: center;
-
-  &__item {
-    display: inline-block;
-    margin-right: 2px
-  }
-
-  &__link {
-    width: 12px
-    height: 12px
-    background: transparent
-    border-radius: 50%
-    display: inline-block;
-    border: 2px solid rgba(255, 255, 255, .7)
-    position: relative
-    transition: .5s
-
-    &:hover {
-      background: rgba(255, 255, 255, .5)
-    }
-  }
-
-  &__item.active .pagination__link {
-    background: #fff
-  }
-}
-
-.pagination-list {
-  list-style: none;
 }
 
 .teachers {
@@ -734,10 +690,6 @@ video {
 
   .page__text {
     font-size 1.1em
-  }
-
-  .page__pagination {
-    display: none
   }
 
   .service {

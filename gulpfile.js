@@ -43,7 +43,7 @@ gulp.task('scripts', function () {
 gulp.task('css-libs', ['stylus'], function () {
     return gulp.src('src/css/main.css')
         .pipe(cssnano())
-        // .pipe(rename({suffix: '.min'}))
+        .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('src/css'))
 });
 
@@ -67,7 +67,7 @@ gulp.task('watch', ['browser-sync', 'css-libs', 'scripts'], function () {
 });
 
 gulp.task('build', ['clean', 'clearUserCache', 'stylus', 'scripts'], function () {
-    var buildCss = gulp.src('src/css/main.min.css')
+    var buildCss = gulp.src('src/css/*')
         .pipe(gulp.dest('dist/css'));
 
     var buildFonts = gulp.src('src/fonts/**/*')
