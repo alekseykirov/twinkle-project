@@ -3,14 +3,6 @@ $(window).on('load', function () {
 });
 
 $(function () {
-    $('.owl-carousel').owlCarousel({
-        loop: true,
-        margin: 25,
-        autoplay: true,
-        autoplayTimeout: 6000,
-        items: 1
-    });
-
 //START =================================================One page Scroll
     var sections = $('.page'),
         display = $('.main-content');
@@ -78,26 +70,6 @@ $(function () {
     });
 //END ===================================================Teachers
 
-//START ===================================================Yandex Map
-
-    ymaps.ready(init);
-    var myMap,
-        myPlacemark;
-
-    function init() {
-        myMap = new ymaps.Map("map", {
-            center: [53.348907, 83.554537],
-            zoom: 14
-        });
-        myPlacemark = new ymaps.Placemark([53.348907, 83.554537], {
-            hintContent: 'Twinkle!',
-            balloonContent: 'Столица России'
-        });
-        myMap.geoObjects.add(myPlacemark);
-    }
-
-//END ===================================================Yandex Map
-
 //START ===================================================Menu
 
     $('.js-menu-icon').on('click', function () {
@@ -127,5 +99,37 @@ $(function () {
         var dataAttr = $(this).attr('data-page');
         $(this).parent().find('.service__background').show();
         $(this).parent().removeClass(dataAttr);
-    })
+    });
+
+
+    //START ===================================================Yandex Map
+
+    ymaps.ready(init);
+    var myMap;
+    var myPlacemark;
+
+    function init() {
+        myMap = new ymaps.Map("map", {
+            center: [53.348907, 83.554537],
+            zoom: 14
+        });
+        myPlacemark = new ymaps.Placemark([53.348907, 83.554537], {}, {
+            iconLayout: 'default#image',
+            iconImageHref: '../img/icons/map-point.png',
+            iconImageSize: [86, 68],
+            hintContent: 'Twinkle!'
+        });
+        myMap.geoObjects.add(myPlacemark);
+    }
+
+//END ===================================================Yandex Map
+
+
+    $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 25,
+        autoplay: true,
+        autoplayTimeout: 6000,
+        items: 1
+    });
 });

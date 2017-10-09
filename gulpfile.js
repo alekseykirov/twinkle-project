@@ -18,14 +18,16 @@ gulp.task('stylus', function () {
         .pipe(browserSync.reload({stream: true}))
 });
 
-gulp.task('clearUserCache', function() {
+gulp.task('clearUserCache', function () {
     return gulp.src(['src/index.html', 'src/service.html'])
         .pipe(htmlreplace({
                 clearCache: {
                     src: [[timestamp, timestamp, timestamp]],
                     tpl: '<link rel="stylesheet" href="css/main.min.css?%s">\n' +
-                         '<script src="js/min.js?%s"></script>\n' +
-                         '<script src="js/main.js?%s"></script>'}}
+                    '<script src="js/min.js?%s"></script>\n' +
+                    '<script src="js/main.js?%s"></script>'
+                }
+            }
             )
         )
         .pipe(gulp.dest('dist'));
