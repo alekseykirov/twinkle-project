@@ -91,14 +91,13 @@ $(function () {
 
     $('.service__item').on('mouseover', function () {
         var dataAttr = $(this).attr('data-page');
-        $(this).parent().addClass(dataAttr);
+        $(this).parent().find('.bg').removeClass('active');
+        $(this).parent().find('.' + dataAttr).addClass('active');
         $(this).parent().find('.service__background').hide();
     });
 
     $('.service__item').on('mouseleave', function () {
-        var dataAttr = $(this).attr('data-page');
-        $(this).parent().find('.service__background').show();
-        $(this).parent().removeClass(dataAttr);
+        $(this).parent().find('.service__background').fadeIn(700);
     });
 
 

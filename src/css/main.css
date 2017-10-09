@@ -135,7 +135,6 @@ body {
 }
 .page_main {
   top: 0;
-  background: url("../img/bg1.jpg") center center no-repeat;
   -webkit-background-size: cover;
           background-size: cover;
 }
@@ -157,6 +156,35 @@ body {
   -webkit-background-size: cover;
           background-size: cover;
 }
+.bg {
+  width: 100%;
+  min-height: 100%;
+  display: block;
+  position: absolute;
+  -webkit-background-size: cover;
+          background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  -webkit-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s;
+}
+.bg.gb {
+  background-image: url("../img/bg-gb.jpg");
+}
+.bg.ch {
+  background-image: url("../img/bg-china.jpg");
+}
+.bg.du {
+  background-image: url("../img/bg-deuch.jpg");
+}
+.bg.log {
+  background-image: url("../img/bg-log.jpg");
+}
+.bg.active {
+  opacity: 1;
+}
 .service {
   position: absolute;
   display: -webkit-box;
@@ -168,18 +196,6 @@ body {
   background-position: center center;
   background-repeat: no-repeat;
 }
-.service.gb {
-  background-image: url("../img/bg-gb.jpg");
-}
-.service.ch {
-  background-image: url("../img/bg-china.jpg");
-}
-.service.du {
-  background-image: url("../img/bg-deuch.jpg");
-}
-.service.log {
-  background-image: url("../img/bg-log.jpg");
-}
 .service__item {
   position: relative;
   min-height: 100%;
@@ -187,6 +203,7 @@ body {
           box-sizing: border-box;
   width: 25%;
   border-right: 1px solid rgba(255,255,255,0.2);
+  border-bottom: 1px solid rgba(255,255,255,0.2);
   display: block;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
@@ -260,11 +277,12 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0 40px;
-/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.7+0,0.6+24,0.5+48,0+100 */ /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.6) 24%, rgba(0,0,0,0.5) 48%, rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.7)), color-stop(24%, rgba(0,0,0,0.6)), color-stop(48%, rgba(0,0,0,0.5)), to(rgba(0,0,0,0)));
-  background: -o-linear-gradient(top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.6) 24%, rgba(0,0,0,0.5) 48%, rgba(0,0,0,0) 100%);
-  background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.6) 24%, rgba(0,0,0,0.5) 48%, rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.7+0,0.6+24,0.5+48,0+100 */
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.6) 24%, rgba(0,0,0,0.5) 48%, rgba(0,0,0,0) 100%) /* Chrome10-25,Safari5.1-6 */;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.7)), color-stop(24%, rgba(0,0,0,0.6)), color-stop(48%, rgba(0,0,0,0.5)), to(rgba(0,0,0,0))) /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */;
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.6) 24%, rgba(0,0,0,0.5) 48%, rgba(0,0,0,0) 100%) /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */;
+  background: -o-linear-gradient(top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.6) 24%, rgba(0,0,0,0.5) 48%, rgba(0,0,0,0) 100%) /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.6) 24%, rgba(0,0,0,0.5) 48%, rgba(0,0,0,0) 100%) /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */;
 }
 .footer {
   position: fixed;
@@ -396,58 +414,6 @@ body {
 .mouse-arrow_bottom {
   -webkit-animation: twinkle-arrow-bottom 1s infinite;
           animation: twinkle-arrow-bottom 1s infinite;
-}
-.teachers {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: end;
-  -webkit-align-items: flex-end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  position: relative;
-  width: 1060px;
-  margin: 0 auto;
-  height: 100%;
-}
-.teacher-item {
-  width: 400px;
-  height: 800px;
-  -webkit-background-size: contain;
-          background-size: contain;
-  -webkit-transition: 1s;
-  -o-transition: 1s;
-  transition: 1s;
-  position: absolute;
-}
-.teacher-item_1 {
-  background: url("../img/2.png") bottom center no-repeat;
-  -webkit-background-size: contain;
-          background-size: contain;
-  left: 0;
-}
-.teacher-item_2 {
-  background: url("../img/5.png") bottom center no-repeat;
-  -webkit-background-size: contain;
-          background-size: contain;
-  left: 17vw;
-}
-.teacher-item_3 {
-  background: url("../img/4.png") bottom center no-repeat;
-  -webkit-background-size: contain;
-          background-size: contain;
-  left: 34vw;
-}
-.teacher-item_4 {
-  background: url("../img/2.png") bottom center no-repeat;
-  -webkit-background-size: contain;
-          background-size: contain;
-  left: 48vw;
 }
 .text {
   position: absolute;
@@ -674,6 +640,7 @@ video {
   }
   .h3 {
     font-size: 4.5vw;
+    letter-spacing: 0;
   }
   .button {
     margin-top: 10px;
@@ -710,23 +677,23 @@ video {
   .page__text {
     font-size: 1.1em;
   }
+  .page_main {
+    background-image: url("../img/bg1.jpg");
+  }
   .service {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
   }
   .service__item {
-    width: 100%;
-    height: 25vh;
+    width: 50%;
+    height: 50vh;
     min-height: auto;
   }
   .service__wrapper {
     text-align: center;
   }
   .service__text {
-    font-size: 0.8em;
     display: none;
   }
   .menu {
